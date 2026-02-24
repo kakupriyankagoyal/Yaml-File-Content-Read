@@ -1,25 +1,18 @@
-action: Investigate
-alert: null
-beingEdited: false
-createdBy: Priyanka Goyal
-id: 125
-publishDate: null
-ruleContent: |-
-  name: 'Any rule'
-  description: 'Any Rule for testing'
-  batch_rule_category: 'Command and control'
-  type: any
+name: 'Any rule'
+description: 'Any Rule for testing'
+batch_rule_category: 'Command and control'
+type: any
 
-  filter:
-    - query:
-        query_string:
-          query: 'organization.name:PSL'
-      alert:
-        - 'debug'
-      runEveryUnit:
-        hours: 1
-      ruleRealert:
-        hours: 1
-      match_enhancement:
-        - "elasticalert.soc_enhancement"
-  ruleDescription: 'Any Rule for testing'
+filter:
+  - query:
+      query_string:
+        query: 'organization.name:PSL'
+    alert:
+      - 'debug'
+    runEveryUnit:
+      hours: 1
+    ruleRealert:
+      hours: 1
+    match_enhancement:
+      - "elasticalert.soc_enhancement"
+ruleDescription: 'Any Rule for testing'
