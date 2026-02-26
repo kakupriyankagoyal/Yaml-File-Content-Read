@@ -1,5 +1,5 @@
-name: 'Any rule'
-description: 'Any Rule for testing'
+name: 'Regional'
+description: 'Published Regional for testing'
 batch_rule_category: 'Command and control'
 type: any
 
