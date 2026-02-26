@@ -1,1 +1,18 @@
+name: 'Genral Publish'
+description: 'Rule for General Published Test'
+batch_rule_category: 'Command and control'
+type: any
 
+filter:
+  - query:
+      query_string:
+        query: 'organization.name:PSL'
+    alert:
+      - 'debug'
+    runEveryUnit:
+      hours: 1
+    ruleRealert:
+      hours: 1
+    match_enhancement:
+      - "elasticalert.soc_enhancement"
+ruleDescription: 'Any Rule for testing'
