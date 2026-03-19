@@ -1,0 +1,17 @@
+name: Test Rule 2
+description: Published Test Rule 2 for testing
+batch_rule_category: Command and control
+type: any
+filter:
+  - query:
+      query_string:
+        query: organization.name:PSL2
+alert:
+  - debug
+runEveryUnit:
+  hours: 1
+ruleRealert:
+  hours: 1
+match_enhancement:
+  - elasticalert.soc_enhancement
+ruleDescription: Test Rule 2 for testing
