@@ -1,0 +1,17 @@
+name: Test Rule 3
+description: Published Test Rule 3 for testing
+batch_rule_category: Command and control
+type: any
+filter:
+  - query:
+      query_string:
+        query: organization.name:PSL23
+alert:
+  - debug
+runEveryUnit:
+  hours: 1
+ruleRealert:
+  hours: 1
+match_enhancement:
+  - elasticalert.soc_enhancement
+ruleDescription: Test Rule 3 for testing
